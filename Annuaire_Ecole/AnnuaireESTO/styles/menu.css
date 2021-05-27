@@ -1,0 +1,225 @@
+body{
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+}
+.triangle{
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 17px solid white;
+	position: relative;
+	top: 20px;
+	left: 7px;
+}
+.icon_user{
+	height: 13px;
+	width: 15px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	right: 9px;
+	top: 8px;
+}
+.rectangle{
+	height: 12px;
+	width: 22px;
+	background-color: white;
+	border-radius: 25% 25% 0 0;
+	display: inline-block;
+	position: relative;
+	bottom: 7px;
+	right: 3px;
+}
+.circle{
+	height: 8px;
+	width: 10px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	top: 8px;
+	right: 10px;
+}
+.circles:hover .circle{
+	background-color:black;
+}
+.close {
+	font-size: 47px;
+	color: white;
+	cursor: pointer;
+}
+
+.close:hover{
+	color: #171f3e
+}
+.dropdwn{
+	margin: 0 auto;
+	z-index: 3;
+	width: 100%;
+	position: relative;
+}
+nav{
+	height: 60px;
+	background: #171f3e;
+	box-shadow: 0 10px 15px rgba(0,0,0,.1);
+}
+.logo{
+	text-transform: uppercase;
+	border: 6px white dashed;
+	float: left;
+	padding: 5px;
+	margin: 6px;
+	color: white;
+}
+nav ul{
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-right: 30px;
+}
+nav ul li{
+	position: relative;
+	list-style: none;
+	display: inline-block;
+}
+#idlogout{
+	width: 162px;
+	background-color: #171f3e;
+	border: none;
+	cursor: pointer;
+	color: white;
+	line-height: 60px;
+	font-size: 19px;
+	padding: 0;
+}
+#idlogout:hover{
+	background: #243342;
+	color: #3498db;
+}
+nav ul li a{
+	display: block;
+	padding: 0 15px;
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+	font-size: 19px;
+}
+nav ul li a:hover{
+	background: #243342;
+}
+.menu ul{
+	position: absolute;
+	display: none;
+}
+nav ul li:hover > ul{
+	display: block;
+}
+nav ul ul li{
+	width: 100%;
+	float: none;
+	display: list-item;
+	position: relative;
+	line-height: 20px !important;
+	background-color: #171f3e;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+.show-menu-btn{
+  float: right;
+}
+.show-menu-btn i{
+  line-height: 60px;
+  margin-right:24px;
+}
+ul a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
+}
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+@media screen and (max-width:600px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    display: none;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+  .menu li{
+    display: block;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    display: block;
+  }
+	.menu ul{
+		position: relative;
+    display: none;
+    margin-right: 32% ;
+
+	}
+}
+
+/* Errors */
+
+.global-errors, .global-success {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EE0000AA;
+    border-radius: 30px;
+    animation: errorAnim 2000ms ease-in-out infinite;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+	max-width: fit-content;
+	z-index: 10000;
+}
+
+.global-success {
+    background-color: #89EF00AA !important;
+}
+
+.global-errors p, .global-success p {
+    padding: 10px 30px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: .8em;
+    text-align: center;
+}
+
+@keyframes errorAnim {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+}

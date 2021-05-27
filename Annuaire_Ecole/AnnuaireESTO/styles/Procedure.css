@@ -1,0 +1,385 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+/* Titre */
+#TitreP{
+  margin-top: 80px;
+ padding: 0px 9% 33px;
+ color: #363842;
+ font-size: 3.4em;
+}
+/* le menu de gestion 'Administrateur' */
+.A_menu{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .champ{
+        position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 274px;
+    height: auto;
+    border-radius: 4px;
+    background-color: #3b597f;
+    text-align: center;
+    margin: 2px;
+    padding: 15px;
+    box-shadow: 1px 0 5px 0 rgba(0,0,0,0.6);
+    cursor: pointer;
+  }
+  .champ:hover{
+    background-color:#333;
+  }
+
+
+
+/* <!-- Tableau responsive --> */
+
+.table{
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 2%;
+}
+
+.table td,.table th{
+  padding:11px 0px;
+  border:1px solid #ddd;
+  text-align: center;
+  font-size:13px;
+}
+
+.table th{
+	background-color: darkblue;
+	color:#ffffff;
+}
+
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+
+
+.BTNEN{
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:9px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.BTNEN:hover {
+	background-color:#5cbf2a;
+}
+.BTNEN:active {
+	position:relative;
+	top:1px;
+}
+
+/*responsive*/
+
+@media(max-width: 500px){
+  .MonP{
+  margin-top: 33%;
+      }
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+	}
+	.table tr{
+		margin-bottom:15px;
+	}
+	.table td{
+		text-align: right;
+	/*	padding-left: 50%;*/
+		text-align: center;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+}
+
+/*gestion d'utilisateur */
+#Gestion{
+  visibility: hidden;
+  position: relative;
+  bottom: 81px;
+  text-align: center;
+}
+/* PopUp */
+
+#ajouter,#ombre{
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.modifier {
+	width: 100%;
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	text-align: center;
+	position: absolute;
+	border-radius: 4px;
+	z-index:3;
+}
+
+.close {
+	position: absolute;
+	right: 10px;
+	font-size: 47px;
+	color: white;
+	transform: rotate(45deg);
+	cursor: pointer;
+
+}
+
+.close:hover{
+	color: #666;
+}
+/* ADD USER */
+.upd_choice h2 {
+    font-size: 1.2em;
+    color: white;
+    line-height: 50px;
+}
+
+.upd_choice  {
+    background-color: #000055;
+}
+
+#ADD{
+  background: #3a87ff;
+  border: 1px solid #3a87ff;
+  text-shadow: 0px 1px 0px #3a87ff;
+}
+#ADD:hover{
+    background: blue;
+}
+.del{
+  background: #ff3a3a;
+  border: 1px solid #ff3a3a;
+  text-shadow: 0px 1px 0px #ff3a3a;
+}
+.del:hover{
+  background: red;
+}
+.add-user form {
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    background-color:#d3d4f9;
+}
+
+
+.add-user form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px -1px #000055;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000055;
+}
+
+.edit-user {
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    background-color:#daf9d3;
+}
+
+
+.edit-user input {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px -1px #000055;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000055;
+}
+
+.btl {
+    color: #FFFFFF !important;
+    background-color: #000055;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px !important;
+    font-weight: 600;
+}
+
+.btl:hover {
+    background-color: #000055EE;
+}
+.btnEdit{
+  background-color: #318700;
+
+}
+.btnEdit:hover {
+    background-color: #abe38b;
+}
+
+.btl:active {
+    transform: scale(1.01);
+}
+
+.sign-selects {
+    width: 100%;
+    max-width: 310px;
+    display: flex;
+}
+.sign_name{
+  max-width: 52%;
+  display: flex;
+  margin-right: 29px;
+}
+.sign-selects select {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px 0;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px -1px #000055;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000055;
+}
+
+.sign-box .errors {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Errors */
+
+.global-errors, .global-success {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EE0000AA;
+    border-radius: 30px;
+    animation: errorAnim 2000ms ease-in-out infinite;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+	max-width: fit-content;
+	z-index: 10000;
+}
+
+.global-success {
+    background-color: #89EF00AA !important;
+}
+
+.global-errors p, .global-success p {
+    padding: 10px 30px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: .8em;
+    text-align: center;
+}
+
+@keyframes errorAnim {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+}
+/* les bares de recherche "annuaire" */
+.search-simple{
+      width: 400px;
+      height: 30px;
+      padding: 10px 0px 11px 26px;
+      border: 1px solid rgb(178, 178, 178);
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+      -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+      box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    }
+
+.AnnuaireS{
+    width: 110px;
+}
+    .search-btn{
+      height: 50px;
+      width: 150px;
+      background: black;
+      border:none;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.2em;
+      margin-left: 16px;
+    }
+    .search-btn:hover{
+      background-color: white;
+      color: black;
+      border:1px black solid;
+      cursor: pointer;
+    }

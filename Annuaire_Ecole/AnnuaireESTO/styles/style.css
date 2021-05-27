@@ -1,0 +1,213 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-color:#3a4983;
+  background-size: cover;
+  height: 100vh;
+}
+
+
+/* Login */
+
+.signContainer {
+
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.signContainer.active {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+	z-index:2;
+}
+
+.sign-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sign-section .sign-box {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    max-height: 567px;
+    box-shadow: 0px 0px 4px -2px #000000;
+    margin: 0 20px;
+}
+
+.sign-box .sign-choice {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50px;
+    box-shadow: 0px 1px 3px -3px #000000;
+    background-color: #005;
+}
+
+.sign-box .sign-choice h2 {
+    font-size: 1.2em;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    transition-property: opacity, background-color;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.sign-choice h2.active {
+    background-color: #E6E6E699;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.sign-box .sign-option {
+    width: 100%;
+    height: calc(100% - 70px);
+}
+
+.sign-option > div {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-option > div form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: center;
+    background-color:#d3d4f9;;
+}
+
+.sign-option div#signInDiv form input,
+.sign-option div#signUpDiv form input {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px -1px #000055;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000055;
+}
+
+.btl {
+    color: #FFFFFF !important;
+    background-color: #000055;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px !important;
+    font-weight: 600;
+}
+
+.btl:hover {
+    background-color: #000055EE;
+}
+
+.btl:active {
+    transform: scale(1.01);
+}
+
+.sign-section .sign-box .sign-option div.active {
+    display: flex;
+}
+
+.sign-selects {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+}
+.sign_name{
+  max-width: 43%;
+  display: flex;
+  margin-right: 2%;
+}
+
+.sign-selects select {
+    width: 100%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 8px 0;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px -1px #000055;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: #000055;
+}
+
+.sign-box .errors {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Errors */
+
+.global-errors, .global-success {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #EE0000AA;
+    border-radius: 30px;
+    animation: errorAnim 2000ms ease-in-out infinite;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+	max-width: fit-content;
+	z-index: 10000;
+}
+
+.global-success {
+    background-color: #89EF00AA !important;
+}
+
+.global-errors p, .global-success p {
+    padding: 10px 30px;
+    color: white;
+    font-weight: 100;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: .8em;
+    text-align: center;
+}
+
+@keyframes errorAnim {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+}
